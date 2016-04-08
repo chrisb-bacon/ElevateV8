@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reading Horizons Elevate</title>
+
+    <link rel="stylesheet" href="css/elevate.css" type="text/css" charset="utf-8" />
+
+    <script src="libraries/fastclick/fastclick.js"></script>
+    <script src="libraries/easeljs/easeljs-0.8.2.min.js"></script>
+    <script src="libraries/greensock/TweenMax.js"></script>
+    <script src="libraries/greensock/TimelineMax.js"></script>
+    <script src="libraries/txtjs/txt.js"></script>
+    <script src="src/assets/AssetText.js"></script>
+    <script src="src/interactions/InteractionBase.js"></script>
+    <script src="src/interactions/InteractionTyping.js"></script>
+    <script src="src/transforms/TransformFade.js"></script>
+    <script>
+
+//        window.addEventListener('load', function() {
+//            FastClick.attach(document.body);
+//        }, false);
+
+        //--------------------------------------------------------------------------
+        //
+        //  Variables
+        //
+        //--------------------------------------------------------------------------
+
+        var CUR_FPS = 60;
+
+        var bmps;
+        var intervalID;
+        var stage;
+
+        //--------------------------------------------------------------------------
+        //
+        //  Methods
+        //
+        //--------------------------------------------------------------------------
+
+        function _init()
+        {
+            bmps = [];
+            stage = new createjs.Stage("appCanvas");
+            timelines = [];
+
+            var typing = new InteractionTyping();
+            typing.play();
+            stage.addChild(typing);
+
+//            createjs.Ticker.setFPS(CUR_FPS);
+//            createjs.Ticker.addEventListener("tick", tick);
+//            var bmp = new createjs.Bitmap("images/flash-logo.jpg");
+//            bmp.regX = 52.05;
+//            bmp.regY = 50;
+//            bmp.x = 100;
+//            bmp.y = 100;
+//            stage.addChild(bmp);
+//            createjs.Tween.get(bmp).to({x:800}, 5000, createjs.Ease.sineOut);
+//
+//            var bmp2 = new createjs.Bitmap("images/flash-logo.jpg");
+//            bmp2.regX = 52.05;
+//            bmp2.regY = 50;
+//            bmp2.x = 100;
+//            bmp2.y = 250;
+//            stage.addChild(bmp2);
+//            TweenMax.ticker.fps(CUR_FPS);
+//            TweenMax.to(bmp2, 5, {x:800, onUpdate:stage.update, onUpdateScope:stage, ease:Sine.easeOut});
+//
+//            TweenMax.to("#flashl", 5, {x:700, ease:Sine.easeOut});
+
+            //TweenMax.to(charText, 5, {x:350, y:350, onUpdate:stage.update, onUpdateScope:stage, ease:Power4.easeOut});
+            //TweenMax.to(bmp, 5, {rotation:360, onUpdate:stage.update, onUpdateScope:stage});
+            //TweenMax.to(bmp, 1, {scaleX:-1, onUpdate:stage.update, onUpdateScope:stage, ease:Power4.easeOut});
+            //TweenMax.to(bmp, 1, {scaleX:1, onUpdate:stage.update, onUpdateScope:stage, ease:Power4.easeOut, delay:2});
+
+            //timeline = new TimelineMax({repeat:-1});
+            //timeline.add(TweenMax.to(bmp, 1, {rotation:360, onUpdate:stage.update, onUpdateScope:stage, ease:Linear.easeNone}));
+            //timeline.add(TweenMax.to(bmp, 1, {scaleX:-1, onUpdate:stage.update, onUpdateScope:stage, ease:Power4.easeOut}));
+            //timeline.add(TweenMax.to(bmp, 1, {scaleX:1, onUpdate:stage.update, onUpdateScope:stage, ease:Power4.easeOut}));
+
+            //intervalID = window.setInterval(spawnLogoGreensock, randomNumber(250, 1000));
+
+            stage.update();
+        }
+
+        function randomNumber(min, max)
+        {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function spawnLogoGreensock()
+        {
+            var bmp = new createjs.Bitmap("images/flash-logo.jpg");
+            bmp.regX = 52.05;
+            bmp.regY = 50;
+            bmp.x = randomNumber(0, 1024);
+            bmp.y = randomNumber(0, 768);
+            bmps.push(bmp);
+            stage.addChild(bmp);
+
+            var timeline = new TimelineMax({repeat:-1});
+            timeline.add(TweenMax.to(bmp, 1, {rotation:360, onUpdate:stage.update, onUpdateScope:stage, ease:Linear.easeNone}));
+            timelines.push(timeline);
+        }
+
+        function spawnLogoTweenJS()
+        {
+            var bmp = new createjs.Bitmap("images/flash-logo.jpg");
+            bmp.regX = 52.05;
+            bmp.regY = 50;
+            bmp.x = randomNumber(0, 1024);
+            bmp.y = randomNumber(0, 768);
+            bmps.push(bmp);
+            stage.addChild(bmp);
+
+            var timeline = new createjs.Tween();
+            timeline.loop = true;
+            timeline.addTween(TweenMax.to(bmp, 1, {rotation:360, onUpdate:stage.update, onUpdateScope:stage, ease:Linear.easeNone}));
+            timelines.push(timeline);
+        }
+
+        function tick(event)
+        {
+            stage.update();
+        }
+
+    </script>
+</head>
+<body onload="_init();">
+    <!--<p>Hello</p>-->
+    <canvas id="appCanvas" width="1024" height="768"></canvas>
+</body>
+</html>
