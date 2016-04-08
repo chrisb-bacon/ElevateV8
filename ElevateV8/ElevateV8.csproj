@@ -23,11 +23,73 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="assets\graphics\alien.png" />
+    <Content Include="css\elevate.css" />
+    <Content Include="fonts\card-edu-bd.svg" />
+    <Content Include="fonts\card-edu-bd.txt" />
+    <Content Include="fonts\card-edu-rg.svg" />
+    <Content Include="fonts\card-edu-rg.txt" />
+    <Content Include="fonts\card-edu-sb.svg" />
+    <Content Include="fonts\card-edu-sb.txt" />
+    <Content Include="font\card-edu-bd.txt" />
+    <Content Include="font\card-edu-reg.txt" />
+    <Content Include="font\card-edu-sb.txt" />
+    <Content Include="images\flash-logo.jpg" />
     <Content Include="index.html" />
+    <Content Include="libraries\easeljs\easeljs-0.8.2.min.js" />
+    <Content Include="libraries\greensock\easing\EasePack.js" />
+    <Content Include="libraries\greensock\jquery.gsap.js" />
+    <Content Include="libraries\greensock\plugins\AttrPlugin.js" />
+    <Content Include="libraries\greensock\plugins\BezierPlugin.js" />
+    <Content Include="libraries\greensock\plugins\ColorPropsPlugin.js" />
+    <Content Include="libraries\greensock\plugins\CSSPlugin.js" />
+    <Content Include="libraries\greensock\plugins\CSSRulePlugin.js" />
+    <Content Include="libraries\greensock\plugins\DirectionalRotationPlugin.js" />
+    <Content Include="libraries\greensock\plugins\EaselPlugin.js" />
+    <Content Include="libraries\greensock\plugins\EndArrayPlugin.js" />
+    <Content Include="libraries\greensock\plugins\KineticPlugin.js" />
+    <Content Include="libraries\greensock\plugins\RaphaelPlugin.js" />
+    <Content Include="libraries\greensock\plugins\RoundPropsPlugin.js" />
+    <Content Include="libraries\greensock\plugins\ScrollToPlugin.js" />
+    <Content Include="libraries\greensock\plugins\TEMPLATE_Plugin.js" />
+    <Content Include="libraries\greensock\plugins\TextPlugin.js" />
+    <Content Include="libraries\greensock\TimelineLite.js" />
+    <Content Include="libraries\greensock\TimelineMax.js" />
+    <Content Include="libraries\greensock\TweenLite.js" />
+    <Content Include="libraries\greensock\TweenMax.js" />
+    <Content Include="libraries\greensock\utils\Draggable.js" />
+    <Content Include="libraries\phaser\phaser.js" />
+    <Content Include="libraries\tweenjs\tweenjs-0.6.2.min.js" />
+    <Content Include="libraries\txtjs\txt.js" />
+    <Content Include="src\assets\AssetText.js" />
+    <Content Include="src\interactions\InteractionBase.js" />
+    <Content Include="src\interactions\InteractionTyping.js" />
+    <Content Include="src\interfaces\IDestroyable.js" />
+    <Content Include="src\interfaces\IPlayable.js" />
+    <Content Include="src\transforms\TransformFade.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.md" />
+    <Content Include="fonts\card-edu-bd.eot" />
+    <Content Include="fonts\card-edu-bd.ttf" />
+    <Content Include="fonts\card-edu-bd.woff" />
+    <Content Include="fonts\card-edu-bd.woff2" />
+    <Content Include="fonts\card-edu-rg.eot" />
+    <Content Include="fonts\card-edu-rg.ttf" />
+    <Content Include="fonts\card-edu-rg.woff" />
+    <Content Include="fonts\card-edu-rg.woff2" />
+    <Content Include="fonts\card-edu-sb.eot" />
+    <Content Include="fonts\card-edu-sb.ttf" />
+    <Content Include="fonts\card-edu-sb.woff" />
+    <Content Include="fonts\card-edu-sb.woff2" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="src\assets\AssetText.js.map" />
+    <Content Include="src\interactions\InteractionBase.js.map" />
+    <Content Include="src\interactions\InteractionTyping.js.map" />
+    <Content Include="src\interfaces\IDestroyable.js.map" />
+    <Content Include="src\interfaces\IPlayable.js.map" />
+    <Content Include="src\transforms\TransformFade.js.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -36,13 +98,37 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="assets\" />
-    <Folder Include="css\" />
-    <Folder Include="fonts\" />
-    <Folder Include="font\" />
-    <Folder Include="images\" />
-    <Folder Include="libraries\" />
-    <Folder Include="src\" />
+    <Folder Include="bin\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="libraries\createjs-lib\createjs-lib.d.ts" />
+    <TypeScriptCompile Include="libraries\createjs\createjs.d.ts" />
+    <TypeScriptCompile Include="libraries\easeljs\easeljs.d.ts" />
+    <TypeScriptCompile Include="libraries\greensock\greensock.d.ts" />
+    <TypeScriptCompile Include="libraries\phaser\p2.d.ts" />
+    <TypeScriptCompile Include="libraries\phaser\phaser.d.ts" />
+    <TypeScriptCompile Include="libraries\phaser\pixi.d.ts" />
+    <TypeScriptCompile Include="libraries\preloadjs\preloadjs.d.ts" />
+    <TypeScriptCompile Include="libraries\soundjs\soundjs-tests.ts" />
+    <TypeScriptCompile Include="libraries\soundjs\soundjs.d.ts" />
+    <TypeScriptCompile Include="libraries\tweenjs\tweenjs.d.ts" />
+    <TypeScriptCompile Include="libraries\txtjs\txt.d.ts" />
+    <TypeScriptCompile Include="src\assets\AssetText.ts" />
+    <TypeScriptCompile Include="src\interactions\InteractionBase.ts" />
+    <TypeScriptCompile Include="src\interactions\InteractionTyping.ts" />
+    <TypeScriptCompile Include="src\interfaces\IDestroyable.ts" />
+    <TypeScriptCompile Include="src\interfaces\IPauseable.ts" />
+    <TypeScriptCompile Include="src\interfaces\IPlayable.ts" />
+    <TypeScriptCompile Include="src\interfaces\IResetable.ts" />
+    <TypeScriptCompile Include="src\interfaces\IResumeable.ts" />
+    <TypeScriptCompile Include="src\transforms\TransformFade.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>

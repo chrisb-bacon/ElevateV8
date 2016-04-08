@@ -1,0 +1,57 @@
+
+/*FONTS*/
+@font-face
+{
+    font-family: 'CardEduRg';
+    src: url('../fonts/card-edu-rg.eot');
+    src: url('../fonts/card-edu-rg.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/card-edu-rg.woff') format('woff'),
+    url('../fonts/card-edu-rg.ttf') format('truetype'),
+    url('../fonts/card-edu-rg.svg#webfont') format('svg');
+}
+
+@font-face
+{
+    font-family: 'CardEduSb';
+    src: url('../fonts/card-edu-sb.eot');
+    src: url('../fonts/card-edu-sb.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/card-edu-sb.woff') format('woff'),
+    url('../fonts/card-edu-sb.ttf') format('truetype'),
+    url('../fonts/card-edu-sb.svg#webfont') format('svg');
+}
+
+@font-face
+{
+    font-family: 'CardEduBd';
+    src: url('../fonts/card-edu-bd.eot');
+    src: url('../fonts/card-edu-bd.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/card-edu-bd.woff') format('woff'),
+    url('../fonts/card-edu-bd.ttf') format('truetype'),
+    url('../fonts/card-edu-bd.svg#webfont') format('svg');
+}
+
+body
+{
+    background-color: white;
+}
+
+p
+{
+    color: black;
+    font-family: 'CardEduRg';
+    font-size: 98pt;
+}
+
+.assetText
+{
+    border-color: transparent;
+    box-shadow: none;
+    color: transparent;
+    height: 1px;
+    outline: none;
+    position: absolute;
+    text-shadow: 0 0 0;
+    width: 1px;
+    left: -10px;
+    top: -10px;
+}
